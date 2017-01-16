@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MAP|ABQ Grid Tool</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-icon-container">
+                    <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
+                    <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
+                </div>
+                <a class="navbar-brand" href="#">MAP|ABQ Task Manager</a>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="sidebar">
+            <div class="sidebar-wrapper">
+                <div class="panel panel-default" id="features">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Grid Square</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <button type="button" class="btn btn-info" id="randBtn">Random Grid Cell</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-table">
+                        <table>
+                            <tr>
+                                <td><input type="text" name="min-lat" value="" placeholder="Minimum Latitude" disabled></td>
+                                <td><input type="text" name="min-lon" value="" placeholder="Minimum Longitude" disabled></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="max-lat" value="" placeholder="Maximum Latitude" disabled></td>
+                                <td><input type="text" name="max-lon" value="" placeholder="Maximum Longitude" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="sidebar-content">
+                        Click on a cell in the grid to return its maximum and minimum lat and long and paste the values into JOSM. <br> If you do not know where you want to digitize click the Random Grid Cell button above to randomly pick a cell for you.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
